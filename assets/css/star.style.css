@@ -1,0 +1,44 @@
+
+.star-five {
+  aspect-ratio: 1;
+  position: absolute;
+  background: snow;
+  display: inline-flex;
+  transition: all 1s ease 0s;
+  clip-path: polygon(50% 0%, 66% 32%, 100% 38%, 78% 64%, 83% 100%, 50% 83%, 17% 100%, 22% 64%, 0 38%, 34% 32%);
+  z-index: var(--start-z-index);
+
+}
+
+
+.star-four {
+  aspect-ratio: 1;
+  position: absolute;
+  display: inline-flex;
+  transition: all 1s ease 0s;
+  clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%,
+      0% 50%, 40% 40%);
+  background: snow;
+  z-index: var(--start-z-index);
+}
+
+
+.circle {
+  aspect-ratio: 1;
+  position: absolute;
+  background: snow;
+  border-radius: var(--pritam);
+  z-index: var(--start-z-index);
+  animation: starglow 2s ease infinite;
+}
+
+
+@keyframes starglow {
+  0% {
+    box-shadow: 0rem 0rem 0rem white;
+  }
+
+  100% {
+    box-shadow: 0rem 0rem 2rem white;
+  }
+}

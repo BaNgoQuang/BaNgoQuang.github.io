@@ -1,0 +1,113 @@
+:root {
+  --cloud-color-1: rgba(255, 255, 255, 0.7);
+  --cloud-color-2: rgba(0, 0, 0, 0.2);
+}
+
+.cloud,
+.cloud-2 {
+  position: absolute;
+  height: 70px;
+  width: 200px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-cloud 2s 1s forwards;
+}
+
+
+@keyframes slide-cloud {
+  100% {
+    transform: translate(0)
+  }
+}
+
+.top-cloud,
+.bottom-cloud {
+  /*       */
+  width: 100%;
+  height: 33%;
+  background: var(--cloud-color-1);
+  position: absolute;
+  left: 0;
+  border-radius: var(--pritam);
+}
+
+.cloud-2 .top-cloud,
+.cloud-2 .bottom-cloud {
+  background: var(--cloud-color-2);
+}
+
+.bottom-cloud {
+  background: transparent;
+}
+
+.cloud-2 .bottom-cloud {
+  background: transparent;
+
+}
+
+.bottom-cloud-child {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  border-radius: var(--pritam);
+  background: var(--cloud-color-1);
+}
+
+.cloud-2 .bottom-cloud-child {
+  background: var(--cloud-color-2);
+
+}
+
+.mid-cloud {
+  background: transparent;
+  aspect-ratio: 1;
+  height: 34%;
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.svg-box {
+  width: 0%;
+  aspect-ratio: 1;
+  background: var(--cloud-color-1);
+
+}
+
+.cloud-2 .svg-box {
+  background: var(--cloud-color-2);
+
+}
+
+.svg {
+  aspect-ratio: 1;
+  height: 100%;
+  fill: var(--cloud-color-1);
+  display: block;
+  object-fit: contain;
+}
+
+.cloud-2 .svg {
+  fill: var(--cloud-color-2);
+}
+
+.mid-cloud-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+
+.top-cloud {
+  top: 0;
+
+}
+
+.bottom-cloud {
+  bottom: 0;
+}

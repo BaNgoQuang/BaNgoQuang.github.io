@@ -1,0 +1,10 @@
+#about-me-section {
+    background: var(--project-bg-color);
+    border: 1px solid var(--project-border-color);
+    border-radius: 0.5rem;
+    /* height: 150px; */
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}

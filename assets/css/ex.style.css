@@ -1,0 +1,300 @@
+ :root {
+     --ex-border-radius: 1rem;
+     --ex-border-width: 0.2rem;
+     --ex-border-padding: 1.5rem;
+     --ex-vertical-line-height: 3rem;
+     --ex-space: 0.5rem;
+     --ex-card-color: black;
+     --ex-border-color: snow;
+     --ex-border-style: dashed;
+ }
+
+ .join-me-and-ex {
+     height: 20dvh;
+     background-image: linear-gradient(var(--your-aura-color-4), var(--ex-card-color));
+ }
+
+ .join-ex-and-skill {
+     height: 20dvh;
+     backdrop-filter: blur(5px);
+     background-image: linear-gradient(var(--ex-card-color), rgba(0, 0, 0, 0.7));
+ }
+
+ .ex-section {
+     background-color: var(--ex-card-color);
+ }
+
+ .ex-card {
+     color: snow;
+     font-size: 0.8rem;
+     border-radius: var(--ex-border-radius);
+     padding: var(--ex-border-padding);
+     border: transparent;
+     position: relative;
+     background-color: var(--ex-card-color);
+     /* background: linear-gradient(to bottom, black); */
+ }
+
+ .ex-card:nth-child(even) {
+     border:
+         var(--ex-border-width) var(--ex-border-style) var(--ex-border-color);
+
+     border-right:
+         0px var(--ex-border-style) transparent;
+ }
+
+
+ .ex-card:nth-child(even)::after {
+     content: "";
+     display: block;
+     width: var(--ex-border-padding);
+     height: calc(100% + (var(--ex-border-width)*2));
+     background-color: var(--ex-card-color);
+     ;
+     border-radius: var(--ex-border-radius);
+     position: absolute;
+     top: calc(var(--ex-border-width) * -1);
+     right: 0px;
+ }
+
+
+ .ex-card:nth-child(odd) {
+     border: 0px var(--ex-border-style) transparent;
+     border-right:
+         var(--ex-border-width) var(--ex-border-style) var(--ex-border-color);
+
+ }
+
+ .ex-card:first-child {
+     border-right:
+         var(--ex-border-width) var(--ex-border-style) var(--ex-border-color);
+
+     border-top:
+         var(--ex-border-width) var(--ex-border-style) var(--ex-border-color);
+ }
+
+ .ex-card:first-child::after {
+     content: "";
+     display: block;
+     width: calc(50%);
+     height: var(--ex-border-padding);
+     background-color: var(--ex-card-color);
+     border-radius: var(--ex-border-radius) 0px;
+     position: absolute;
+     top: calc(var(--ex-border-width) * -1);
+     left: 0;
+ }
+
+
+ .ex-card:last-child {
+     border-bottom:
+         var(--ex-border-width) var(--ex-border-style) var(--ex-border-color);
+
+ }
+
+ .ex-card:last-child::after {
+     content: "";
+     display: block;
+     width: var(--ex-border-padding);
+     height: var(--ex-border-padding);
+     background-color: var(--ex-card-color);
+
+     border-radius: 0px var(--ex-border-radius);
+     position: absolute;
+     bottom: calc(var(--ex-border-width) * -1);
+     left: 0;
+     width: 50%;
+ }
+
+
+ .ex-vertical-line-box {
+     position: relative;
+     height: var(--ex-vertical-line-height);
+ }
+
+ .ex-vertical-line-svg-box {
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+ .ex-vertical-line {
+     border-right:
+         calc(var(--ex-border-width) * 1) var(--ex-border-style) var(--ex-border-color);
+     height: var(--ex-vertical-line-height);
+     width: 0px;
+     margin: auto;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+
+
+
+
+
+
+
+ .company-container {
+     position: relative;
+     background: black;
+     padding: var(--ex-border-padding);
+     border:
+         calc(var(--ex-border-width) * 0.7) var(--ex-border-style) var(--ex-border-color);
+     border-radius: calc(var(--ex-border-padding) - var(--ex-border-radius));
+     background: black;
+     z-index: 2;
+     transform: scale(0.5);
+ }
+
+ .animate-company-container {
+     animation: company-container-slide 2s forwards;
+ }
+
+ @keyframes company-container-slide {
+     100% {
+         transform: scale(1);
+
+     }
+ }
+
+ .company-container a {
+     text-decoration: none;
+     color: snow;
+     font-size: 1rem;
+ }
+
+ .join-card-company-container {
+     position: absolute;
+     z-index: 1;
+     border-top: calc(var(--ex-border-width) * 1) var(--ex-border-style) var(--ex-border-color);
+     width: 50%;
+     top: 50%;
+     transform: translateY(-50%);
+ }
+
+ .ex-card:nth-child(odd) .join-card-company-container {
+     right: 0;
+ }
+
+ .ex-card:nth-child(even) .join-card-company-container {
+     left: 0;
+ }
+
+ .ex-card:nth-child(odd) .company-container {
+     transform-origin: right;
+ }
+
+ .ex-card:nth-child(even) .company-container {
+     transform-origin: left;
+ }
+
+ .company-name {
+     margin: 0;
+     padding: 0 !important;
+     padding-left: calc(var(--ex-space) * 1) !important;
+
+ }
+
+ .company-box {
+     display: flex;
+     align-items: center;
+ }
+
+ .company-box p {
+     width: 100%;
+     padding-left: calc(var(--ex-space) * 2);
+ }
+
+ .company-img {
+     max-width: calc(var(--ex-space) * 6);
+     margin-left: calc(var(--ex-space) * 1);
+     aspect-ratio: 1;
+     border-radius: 4rem;
+ }
+
+ .company-role-box {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .company-role {
+     display: flex;
+     align-items: center;
+
+ }
+
+ .company-role p {
+     margin: 0px;
+     padding: 0px;
+ }
+
+ .role-box {
+     padding: calc(var(--ex-space) * 1);
+
+ }
+
+ .role-name {
+     padding: var(--ex-space) 0 !important;
+     margin: 0;
+ }
+
+ .role-length {
+     padding: var(--ex-space) 0 !important;
+     color: gray;
+ }
+
+
+
+ .svg-container {
+     position: relative;
+     display: flex;
+     padding: calc(var(--ex-space) * 3);
+     height: 100%;
+ }
+
+ .svg-container>* {
+     fill: var(--ex-border-color);
+ }
+
+ .role-vertical-line {
+     width: 0rem;
+     height: 100%;
+     position: absolute;
+     right: 0;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     border-right:
+         calc(var(--ex-border-width) * 0.7) var(--ex-border-style) var(--ex-border-color);
+ }
+
+ .last-role-vertical-line {
+     bottom: 100%;
+ }
+
+ .first-role-vertical-line {
+     top: 100%;
+ }
+
+
+ .company-accured-skill-box {
+     display: flex;
+     align-items: center;
+     gap: var(--ex-space);
+ }
+
+
+ @media (min-width:700px) {
+     :root {
+         --ex-border-padding: 3rem;
+         --ex-border-radius: 2rem;
+
+     }
+ }
+
+ .span-svg-circle>* {
+     fill: var(--ex-border-color);
+ }

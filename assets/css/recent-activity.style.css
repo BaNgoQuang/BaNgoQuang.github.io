@@ -1,0 +1,117 @@
+#recent-activity-section {
+
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+.prefix-text {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.rc-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow: hidden;
+    width: 100%;
+    align-items: stretch;
+
+}
+
+.rc-card {
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: var(--skill-bg-color);
+    background: var(--project-bg-color);
+    border: 1px solid var(--project-border-color);
+    border-radius: 0.5rem;
+    gap: calc(var(--project-space)* 1);
+    min-height: 5rem;
+
+}
+
+.rc-card:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.rc-card-active {
+    /*
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) ;
+                     */
+    transform: scale(2);
+}
+
+
+#rc-content-box {
+    height: calc(100%);
+    overflow: auto;
+}
+
+.rc-text-element {
+    display: block;
+    color: snow;
+    text-align: left;
+    padding: 0.9rem 0;
+    text-decoration: none;
+
+
+}
+
+.rc-text-by-element {
+    display: block;
+    color: grey;
+    text-align: left;
+    text-decoration: none;
+    padding-bottom: 1rem;
+    font-size: 0.7rem;
+
+}
+
+.rc-text-element:hover {
+    text-decoration: underline;
+}
+
+
+.drawing-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.writing-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.drawing-box {
+    padding-bottom: 0.5rem;
+}
+
+.drawing-img {
+    width: 100%;
+    /* Adjust as needed */
+    height: auto;
+    /* Maintains aspect ratio */
+    object-fit: cover;
+    /* Options: contain, cover, fill, none */
+    border-radius: 0.5rem;
+
+}

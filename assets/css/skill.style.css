@@ -1,0 +1,118 @@
+:root {
+    --skill-border-color: #252527;
+    --skill-text-color: #4AA3A9;
+    --skill-text-color: smoke;
+    --skill-bg-color: #171719;
+    --skill-padding-y: 0.3rem;
+    --skill-padding-x: 0.8rem;
+    --add-skill-time: 1000;
+}
+
+#skill-section {
+    position: relative;
+
+}
+
+.skill-container {}
+
+#skill-section h2 {}
+
+.skill-container h3 {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-weight: 600;
+    font-family: "Delius", serif;
+
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.skill {
+    font-family: "Delius", serif;
+    color: var(--skill-text-color);
+    display: flex;
+    align-items: center;
+    width: 0px;
+    text-decoration: none;
+    padding: var(--skill-padding-y) var(--skill-padding-x);
+    width: fit-content;
+    /* transform: scaleX(0.5); */
+    transform: scaleX(0);
+
+    transform-origin: left;
+    margin: 0 1rem 1rem 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: linear-gradient(var(--skill-bg-color) 0 0) padding-box,
+        linear-gradient(to right, var(--skill-border-color), var(--skill-border-color)) border-box;
+    border: 1px solid transparent;
+}
+
+.skill-active {
+    /* transform: scaleX(1); */
+    animation: skill-swipe calc(var(--add-skill-time) * 1ms) forwards;
+
+}
+
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    aspect-ratio: 1;
+    border: 1px solid var(--skill-border-color);
+    border-radius: var(--pritam);
+    margin-left: calc(var(--skill-padding-y) * -1);
+    background-color: var(--skill-bg-color);
+}
+
+.break-skill {
+    display: block;
+    width: 100%;
+
+}
+
+.angular:hover {
+    background: linear-gradient(var(--skill-bg-color) 0 0) padding-box,
+        linear-gradient(to right, red, var(--skill-border-color)) border-box;
+}
+
+
+@keyframes skill-swipe {
+    0% {
+        transform: scaleX(0);
+    }
+
+    70% {
+        transform: scaleX(1.1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+#certification-section>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+
+.certification-link {
+    text-decoration: none;
+    color: var(--skill-text-color);
+    padding: var(--skill-padding-y) var(--skill-padding-x);
+    border-radius: 0.5rem;
+    border: 1px solid var(--skill-border-color);
+    background: var(--project-bg-color);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}

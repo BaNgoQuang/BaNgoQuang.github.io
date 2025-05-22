@@ -1,0 +1,145 @@
+:root {
+    --me-height: 20vh;
+    --message-popup-animation-duration: 3000;
+}
+
+.me {
+    position: relative;
+    bottom: 0;
+    left: calc(var(--home-1-roof-1-width) + var(--home-2-width));
+    top: calc(var(--me-height) / 2);
+    width: 100%;
+    display: flex;
+    align-items: end;
+    font-family: "Gabriela", serif;
+    color: snow;
+}
+
+
+
+.message-box {
+    position: absolute;
+    left: 0;
+    left: calc(var(--me-height) / -8);
+    /* width: 120%; */
+    bottom: calc(var(--me-height) / 2);
+}
+
+
+
+.img-box {
+    position: relative;
+    height: calc(var(--me-height));
+    z-index: 60;
+    aspect-ratio: 1;
+}
+
+.message {
+    position: relative;
+    right: calc(var(--me-height) * 0.7);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    z-index: 40;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background: var(--cloud-color-2);
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    animation: message-popup forwards;
+    animation-duration: calc(var(--message-popup-animation-duration) * 1ms);
+    transition: calc(var(--message-popup-animation-duration) * 0.1ms);
+    border: 1px solid var(--cloud-color-1);
+    /*   border-bottom: none */
+}
+
+.me:hover .message {
+    transform: rotateX(0deg);
+    transition: calc(var(--message-popup-animation-duration) * 0.1ms);
+
+}
+
+.message:after {
+    position: absolute;
+    content: "";
+    height: 20%;
+    aspect-ratio: 1;
+    background: var(--cloud-color-2);
+    border: 1px solid var(--cloud-color-1);
+    right: 4%;
+    bottom: -10%;
+    z-index: 50;
+    transform: rotate(133deg);
+    backdrop-filter: blur(90px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+
+}
+
+@keyframes message-popup {
+    50% {
+        transform: rotateX(0deg);
+    }
+
+    90% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        opacity: 0;
+    }
+}
+
+
+.hand {
+    animation: hand-wave 1.5s infinite;
+    transform-origin: bottom;
+    display: block;
+    font-size: 1.3rem;
+}
+
+
+
+@keyframes hand-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    30% {
+        transform: rotate(0deg);
+    }
+
+    70% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@media (min-width:700px) {
+    :root {
+        --me-height: 30vh;
+    }
+
+    .me {
+        left: calc((var(--home-1-roof-1-width) + var(--home-2-width)) * 2);
+    }
+
+    .message-box {
+        left: calc(var(--me-height) / 3);
+        /* width: 80%; */
+        position: absolute;
+        bottom: calc(var(--me-height) / 2);
+    }
+}

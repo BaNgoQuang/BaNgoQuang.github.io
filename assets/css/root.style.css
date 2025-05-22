@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+
+:root {
+  --pritam: 80rem;
+  --star-height: 2vh;
+  --start-z-index: 2;
+  --ground-z-index: 6;
+  --body-color: #132B3D;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--body-color);
+  color: snow;
+  font-family: "Delius", serif;
+}
+
+h2,
+h3 {
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal {
+  background: rgba(45, 40, 0, 0.6);
+  background: var(--project-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--project-border-color);
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 1.5/1;
+  text-align: center;
+  transform: scale(0.8);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.modal h2 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.modal-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.show {
+  transform: scale(1);
+}
+
+.close-btn {
+  padding: 0.2rem 0.4rem;
+  background: #ff5252;
+  color: white;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #d32f2f;
+}
+
+
+.fade-letter {
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 0.3s ease-in-out;
+  text-decoration: inherit;
+}

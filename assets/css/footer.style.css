@@ -1,0 +1,127 @@
+:root {
+    --fall-duration: 18s;
+}
+
+footer {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    color: snow;
+    font-family: "Gabriela", serif;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    border: 2px solid skyblue;
+    border: 1px solid var(--project-border-color);
+    border-radius: 0.5rem;
+    background: black;
+    padding: 1rem 2rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.footer-container-child {
+    display: flex;
+}
+
+.footer-container-copy-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    background: black;
+    width: 100%;
+    border: 1px solid var(--project-border-color);
+    gap: 0.5rem;
+}
+
+footer div {
+    z-index: 2;
+}
+
+footer .img-box {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+}
+
+
+footer .text-box {
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+
+@media (min-width:700px) {
+    footer .text-box {
+        font-size: 2rem;
+
+
+    }
+}
+
+.pri {
+    border-radius: 51% 49% 46% 54% / 31% 27% 73% 69%;
+    max-width: 200px;
+}
+
+.pri:hover {
+    /* border-radius: 51% 49% 46% 54% / 78% 24% 76% 22%; */
+
+}
+
+
+.heart {
+    display: inline-block;
+    animation: heartbeat 1s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1.4);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+}
+
+i {
+    overflow: hidden;
+    height: 5rem;
+    position: absolute;
+    border-radius: 1rem;
+    animation: star-fall var(--fall-duration) linear infinite;
+    transform: translateY(-50vh) rotate(45deg);
+}
+
+@keyframes star-fall {
+    100% {
+        transform: translateY(80vh) translateX(-120vh) rotate(45deg);
+    }
+}
+
+.social-icon-box {
+    color: snow;
+}
